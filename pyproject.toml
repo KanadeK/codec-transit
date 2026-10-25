@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools==84.2.1", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codec-transit"
+version = "0.1.0"
+description = "Explicit text transcoding with a Unicode identity gate"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "KanadeK"}]
+dependencies = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Topic :: Text Processing",
+]
+
+[project.urls]
+Repository = "https://github.com/KanadeK/codec-transit"
+Issues = "https://github.com/KanadeK/codec-transit/issues"
+
+[project.scripts]
+codec-transit = "codec_transit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
